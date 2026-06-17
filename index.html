@@ -132,19 +132,6 @@ nav {
   letter-spacing: -.02em;
 }
 
-/* Blinking cursor effect on subtitle */
-.hero-sub {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.05rem; font-weight: 400; color: var(--muted-lt);
-  margin-bottom: 1rem;
-}
-
-.hero-sub::after {
-  content: '_';
-  color: var(--cyan);
-  animation: cursor 1.1s step-end infinite;
-}
-
 @keyframes cursor { 0%,100%{opacity:1} 50%{opacity:0} }
 
 .hero-desc {
@@ -485,7 +472,10 @@ footer {
 /* ───────────────────────── RESPONSIVE */
 @media(max-width:900px){
   .hero-inner { grid-template-columns:1fr; }
-  .hero-card  { display:none; }
+  .hero-card  { 
+    display: block; 
+    margin-top: 2rem; 
+  }
   .about-grid { grid-template-columns:1fr; }
 }
 
@@ -527,7 +517,7 @@ footer {
 
       <h1 class="hero-name">
         Abhishek<br>
-        <span class="grad-text">Birajdar.</span>
+        <span class="grad-text">Birajdar</span>
       </h1>
 
       <p class="hero-sub">Aspiring Data Analyst / Python Developer / Cloud Engineer</p>
@@ -555,7 +545,7 @@ footer {
         <img src="profile_pic.JPG" alt="Abhishek Birajdar" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'c-init\'>AB</span>'" />
       </div>
       <div class="c-name">Abhishek Birajdar</div>
-      <div class="c-role">Data Analyst / Python Developer / Cloud Engineer, India</div>
+      <div class="c-role">Data Analyst / Python Developer / Cloud Engineer, Pune, India</div>
       <div class="c-divider"></div>
       <div class="stats-row">
         <div class="s-box"><span class="s-num">2+</span><div class="s-lbl">Projects</div></div>
